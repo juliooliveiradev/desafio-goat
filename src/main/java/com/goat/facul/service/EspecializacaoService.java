@@ -4,6 +4,7 @@ import com.goat.facul.model.Especializacao;
 import com.goat.facul.repository.EspecializacaoRepository;
 import jakarta.persistence.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -23,6 +24,7 @@ public class EspecializacaoService {
         return especializacaoRepository.save(especializacao);
     }
 
+    @Cacheable(value = "especializacoes")
     public List<Especializacao> findAll() {
         return especializacaoRepository.findAll();
     }
