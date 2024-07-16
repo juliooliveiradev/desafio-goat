@@ -50,29 +50,29 @@ public class ServidorServiceTest {
 
     @Test
     public void testAddEspecializacao() {
-        // Dados de exemplo
+
         Long servidorId = 1L;
         Long especializacaoId = 2L;
 
-        // Mockando o retorno dos repositórios
-        Servidor servidor = new Servidor();  // Suponha que Servidor e Especializacao tenham construtores apropriados
+
+        Servidor servidor = new Servidor();
         Especializacao especializacao = new Especializacao();
         especializacao.setId(especializacaoId);
 
         when(servidorRepository.findById(servidorId)).thenReturn(Optional.of(servidor));
         when(especializacaoRepository.findById(especializacaoId)).thenReturn(Optional.of(especializacao));
 
-        // Executando o método
+
         Servidor resultado = servidorService.addEspecializacao(servidorId, especializacaoId);
 
-        // Verificando se os métodos foram chamados
+
         verify(servidorRepository, times(1)).findById(servidorId);
         verify(especializacaoRepository, times(1)).findById(especializacaoId);
         verify(servidorRepository, times(1)).save(servidor);
         verify(pedidoEspecializacaoRepository, times(1)).save(any(PedidoEspecializacao.class));
 
-        // Verificando o resultado
-        assertEquals(servidor, resultado);  // Verifica se o objeto retornado é o mesmo objeto servidor
+
+        assertEquals(servidor, resultado);
     }
 
 

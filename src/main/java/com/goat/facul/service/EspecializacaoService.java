@@ -45,18 +45,4 @@ public class EspecializacaoService {
         especializacaoRepository.delete(especializacao);
     }
 
-    public void aprovarEspecializacao(Long especializacaoId) {
-        Especializacao especializacao = findById(especializacaoId);
-        // Lógica para aprovação da especialização (exemplo)
-        especializacao.setAprovada(true);
-        especializacaoRepository.save(especializacao);
-    }
-
-    public void indeferirEspecializacao(Long especializacaoId, String motivo) {
-        Especializacao especializacao = findById(especializacaoId);
-        // Lógica para indeferimento da especialização (exemplo)
-        especializacao.setAprovada(false);
-        especializacao.setMotivoIndeferimento(motivo);
-        especializacaoRepository.save(especializacao);
-    }
 }

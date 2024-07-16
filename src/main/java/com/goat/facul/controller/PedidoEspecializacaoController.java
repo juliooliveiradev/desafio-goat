@@ -14,12 +14,14 @@ public class PedidoEspecializacaoController {
     @Autowired
     private PedidoEspecializacaoService pedidoEspecializacaoService;
 
+    //Endpoint para listar todos os pedidos
     @GetMapping
     public ResponseEntity<List<PedidoEspecializacaoDTO>> listarPedidosEspecializacao() {
         List<PedidoEspecializacaoDTO> pedidos = pedidoEspecializacaoService.listarPedidosEspecializacao();
         return ResponseEntity.ok(pedidos);
     }
 
+    // Endpoint para aprovar um pedido de especialização
     @PostMapping("/{pedidoId}/aprovar")
     public ResponseEntity<Void> aprovarPedidoEspecializacao(@PathVariable Long pedidoId) {
         pedidoEspecializacaoService.aprovarPedidoEspecializacao(pedidoId);

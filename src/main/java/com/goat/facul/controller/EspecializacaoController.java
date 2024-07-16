@@ -46,15 +46,5 @@ public class EspecializacaoController {
         return ResponseEntity.noContent().build();
     }
 
-    @PostMapping("/{especializacaoId}/aprovar")
-    public ResponseEntity<Void> aprovarEspecializacao(@PathVariable Long especializacaoId) {
-        especializacaoService.aprovarEspecializacao(especializacaoId);
-        return ResponseEntity.ok().build();
-    }
 
-    @PostMapping("/{especializacaoId}/indeferir")
-    public ResponseEntity<Void> indeferirEspecializacao(@PathVariable Long especializacaoId, @RequestParam String motivo) {
-        especializacaoService.indeferirEspecializacao(especializacaoId, motivo);
-        return ResponseEntity.ok().build();
-    }
 }

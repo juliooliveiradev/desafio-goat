@@ -72,6 +72,6 @@ public class PedidoEspecializacao {
     public void setMotivoReprovacao(String motivoReprovacao) {
         this.motivoReprovacao = motivoReprovacao;
     }
-    // Getters e setters, construtores, etc.
+
 }
 

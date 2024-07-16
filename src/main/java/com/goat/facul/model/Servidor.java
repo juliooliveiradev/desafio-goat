@@ -1,7 +1,6 @@
 package com.goat.facul.model;
 
-import com.goat.facul.model.Especializacao;
-import com.goat.facul.model.TipoServidor;
+
 import jakarta.persistence.*;
 
 import java.time.LocalDate;

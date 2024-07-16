@@ -8,7 +8,6 @@ import com.goat.facul.repository.EspecializacaoRepository;
 import com.goat.facul.repository.PedidoEspecializacaoRepository;
 import com.goat.facul.repository.ServidorRepository;
 import jakarta.persistence.EntityNotFoundException;
-import org.antlr.v4.runtime.misc.LogManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

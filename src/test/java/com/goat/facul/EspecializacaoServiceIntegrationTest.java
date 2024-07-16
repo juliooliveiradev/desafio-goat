@@ -4,7 +4,6 @@ import com.goat.facul.model.Especializacao;
 import com.goat.facul.model.TipoEspecializacao;
 import com.goat.facul.repository.EspecializacaoRepository;
 import com.goat.facul.service.EspecializacaoService;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
