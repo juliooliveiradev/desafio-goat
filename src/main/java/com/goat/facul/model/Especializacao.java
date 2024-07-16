@@ -21,6 +21,8 @@ public class Especializacao {
     private TipoEspecializacao tipo;
 
     private int cargaHoraria;
+
+    @Column(name = "valor_total_custo", nullable = false)
     private BigDecimal valorTotal;
 
     @ManyToMany(mappedBy = "especializacoes")
